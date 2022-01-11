@@ -6,7 +6,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const path = require("path");   //für die korrekte Interpretation der Datei- und Verzeichnispfade im Windows-Stil
 const fs = require("fs");   //file system zum Zurückgrefen aud Dateisystemen + Lesen und Schreiben von Dateien
-const dotenv = require("dotenv").config();   //um verschiedene Umgebungsvariablen und deren Werte festzulegen (?)
+/* const dotenv = require("dotenv").config();  */  //um verschiedene Umgebungsvariablen und deren Werte festzulegen (?)
  
 const mongoose = require("mongoose");
 const conn = require("./db/conn");
@@ -23,8 +23,9 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 const imgModel = require('./models/products');
+const User = require('./models/users');
 
-app.get('/views/product_upload', (req, res) => {
+app.get('./product_upload', (req, res) => {
   imgModel.find({}, (err, items) => {
       if (err) {
           console.log(err);
@@ -36,7 +37,7 @@ app.get('/views/product_upload', (req, res) => {
   });
 });
 
-app.post('/views/product_upload', upload.single('image'), (req, res, next) => {
+app.post('./product_upload', upload.single('image'), (req, res, next) => {
   
   const obj = {
       productN: req.body.productN,
@@ -54,7 +55,6 @@ app.post('/views/product_upload', upload.single('image'), (req, res, next) => {
           console.log(err);
       }
       else {
-          // item.save();
           res.redirect('/views/index');
       }
   });
@@ -107,7 +107,6 @@ app.post("/register", async (req, res) => {
     const cpassword = req.body.cpsw;
     
     if(password === cpassword){
-
       const registerUser = new User({
         userN : req.body.userN,  
         adrs1 : req.body.adrs1,
@@ -116,7 +115,6 @@ app.post("/register", async (req, res) => {
         psw : req.body.psw,
         cpsw : req.body.cpsw
       })
-
       const registered = await registerUser.save();
       res.status(201).render("index");
 
@@ -127,6 +125,7 @@ app.post("/register", async (req, res) => {
     res.send(req.body.userN); */
 
   } catch(error) {
+    console.log(error);
     res.status(400).send(error);
   }
 });
