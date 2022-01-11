@@ -1,0 +1,43 @@
+<DOCTYPE html>
+  <html lang="eng">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel='stylesheet' href='css/user.css' type='text/css' />
+  
+    <title>Sweets&Drinks</title>
+  </head>
+  
+  <body>
+    <form action= "/register" method="post">
+      <div class="container">
+      <label for="userN"><b>Name</b></label>
+      <input type="text" name="userN" onkeyup="myfunction1()" id="userNameInput" required/>
+    
+      <label for="adrs1"><b>Straße und Nr.</b></label>
+      <input type="text" name="adrs1" id= "addressInput" required/>
+  
+      <label for="adrs2"><b>PLZ, Ort</b></label>
+      <input type="text" name="adrs2" id= "addressInput" required/>
+  
+      <label for="eml"><b>E-Mail</b></label>
+      <input type="text" name="eml" id= "emailInput" required/>
+      
+      <label for="psw"><b>Kennwort</b></label>
+      <input type="password" name="psw" onkeyup="onPasswordChanged()" id="passwordInput" required>
+      <p id="msg"></p>
+  
+       
+      <label for="cpsw"><b>Kennwort wiederholen</b></label>
+      <input type="password" name="cpsw" onkeyup="onPasswordChanged()" id="passwordInput" required>
+      <p id="msg"></p>
+  
+      <button type="submit" id="passwordButton">Registrieren</button>
+    </div>
+      </form>
+  
+  </body>
+  </html>
+   

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweets&Drinks</title>
+    <link rel="stylesheet" href="css/user.css">
+</head>
+
+<body>
+    <form action="/login" method="post">
+        <div class="container">
+          <label for="userN"><b>Name</b></label>
+            <input type="text" placeholder="Bitte geben Sie Ihr Name ein" name="userN" id="userNameInput" required>
+          <label for="psw"><b>Kennwort</b></label>
+            <input type="password" placeholder="Kennwort eingeben" name="psw" onkeyup="onPasswordChanged()" id="passwordInput" required>
+            <p id="msg"></p>
+            <button type="submit" id="passwordButton" >Anmelden</button>
+        </div>
+    </form>

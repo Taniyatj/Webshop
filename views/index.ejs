@@ -1,0 +1,299 @@
+<DOCTYPE html>
+  <html lang="eng">
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+       <!-- Wieso funktioniert diese Funktion nicht?  -->
+      <link rel = "icon" href = "images/Logo.png"type = "image/x-icon" >   
+      <link rel="stylesheet" type="text/css" href="css/style.css"/>
+      <link rel="stylesheet" type="text/css" href="css/ionicons.min.css"/>
+      
+    <link href="http//fonts.googleplis.com/css?family=lato=100,300,300italic" rel="stylesheet" type="text/css"> 
+
+      <title>Sweets&Drinks</title>
+    </head>
+    
+    <body>
+      <header>
+        <nav>
+          <div class="row">
+            <ul class="main-nav">
+              <li><a href="#products">Produkte</a></li>
+              <li><a href="#blog">Unser Blog</a></li>
+              <li><a href="/register">Registrieren</a></li>
+              <li><a href="/login">Anmelden</a></li>
+              <li><a href="/logout">Abmelden</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="hero_text_box">
+          <h1>
+            Leckere<br>Süßigkeiten und Getränke<br>aus aller Welt&#33;
+          </h1>
+          <a class="btn btn-full js--scroll-to-candy" href="#products">Süßigkeiten</a>
+          <a class="btn btn-ghost js--scroll-to-candy" href="#products"
+            >Getränke</a
+          >
+        </div>
+      </header>
+
+      <section class="section-featueres">
+        <div class="row">
+          <h2>Jetzt bestellen</h2>
+          <p class="long-copy">
+            Sie bestellen und wir liefern! Freuen Sie sich über eine große Auswahl an Süßigkeiten und Getränke. Als ein Kooperationspartner eines internationalen Netzwerks, haben wir eine große Auswahl an verschiedenen Produkten aus Verschiedenen Orten.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col span-1-of-3 box">
+            <i class="ion-md-calendar icon-big"></i>
+            <h3>7 Tage die Woche</h3>
+            <p>
+              Wir liefern auch an Sonntagen und an Feiertagen. Egal ob Silvester, Ostern, Halloween oder Weinachten, wir sind immer für Sie da!
+            </p>
+          </div>
+          <div class="col span-1-of-3 box">
+            <i class="ion-md-clock icon-big"></i>
+            <h3>Schnelle Lieferung</h3>
+            <p>
+              Wir bieten zwei Lieferungsmöglichkeiten: <br><em>Premium:</em> innerhalb von 48 Stunden <br> <em>Normal:</em> innerhalb von 24 Stunden
+            </p>
+          </div>
+          <div class="col span-1-of-3 box">
+            <i class="ion-md-globe icon-big"></i>
+            <h3>Deutschlandweit</h3>
+            <p>
+              Wir sind ein Bestandteil eines internationalen Netzwerks aus vielen verschiedenen Süßigkeiten- und Getränkelieferanten. Wir beliefern Sie in Deutschland mit Süßigkeiten und Getränken aus verschiedenen Orten.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="blog" id="blog">
+        <div class="row">
+          <h2>Unser Blog</h2>
+        </div>
+        <div class="row">
+          <div class="col span-1-of-3 first">
+            <blockquote>
+              Dank der kurzfristigen und schnellen Lieferung konnte ich den Geburtstag meines Kindes gut organisieren. Nicht nur meinem Kind, sondern allen haben eure Produkte sehr gefallen!
+            </blockquote>
+            <cite><img src="images/fist.jpg" />Carlos_Grimm</cite>
+          </div>
+
+          <div class="col span-1-of-3 second">
+            <blockquote>
+              Das war eine Überraschung, dass ich das Packet noch am Halloween erhalten habe, obwohl ich ein Tag davor bestellt habe. Vielen lieben Dank!
+            </blockquote>
+            <cite
+              ><img src="images/second.jpg" /> Jack234</cite
+            >
+          </div>
+
+          <div class="col span-1-of-3 third">
+            <blockquote>
+              Vielen Dank für eure schnelle Lieferung! Die Qualität eurer Produkte und der Preis sind sehr ausgeglichen. Auf jedenfall hat sich der Einkauf sehr gelohnt. Ich betreibe ein Kleingeschäft und werde die Produkte von euch regelmäßig bestellen.
+            </blockquote>
+            <cite><img src="images/third.jpg" />AmiraK.</cite>
+          </div>
+        </div>
+      </section>
+
+      <section class="the-candy js--candy" id="products">
+        <ul class="candy clearfix">
+          <li>
+            <figure class="candy-photo">
+             <a href="/views/products.ejs" onclick="produktAnzeigen(1)"><img src="images/Sweets_Europe.jpg"/></a> 
+            </figure>
+          </li>
+          <li>
+            <figure class="candy-photo" onclick="produktAnzeigen(2)">
+              <a href="/views/products.ejs"><img src="images/Sweets_America.jpg"/></a>
+            </figure>
+          </li>
+          <li>
+            <figure class="candy-photo" onclick="produktAnzeigen(3)">
+              <a href="/views/products.ejs"><img src="images/Sweets_Asia.jpg"/>
+            </a></figure>
+          </li>
+        </ul>
+
+        <ul class="candy clearfix">
+          <li>
+            <figure class="candy-photo" onclick="produktAnzeigen(4)"> 
+              <a href="/views/products.ejs"><img src="images/Drinks_Europe.jpg"/>
+            </a></figure>
+          </li>
+          <li>
+            <figure class="candy-photo" onclick="produktAnzeigen(5)">
+              <a href="/views/products.ejs"><img src="images/Drinks_America.jpg"/>
+            </a></figure>
+          </li>
+          <li>
+            <figure class="candy-photo" onclick="produktAnzeigen(6)">
+              <a href="/views/products.ejs"><img src="images/Drinks_Asia.jpg"/>
+            </a></figure>
+          </li>
+        </ul>
+      </section> 
+
+      <section class="section-plans" id="sing">
+        <div class="row">
+          <h2>Lieferung</h2>
+          <div class="row">
+            <div class="col span-1-of-2">
+              <div class="plan-box">
+                <div>
+                  <h3>Premium</h3>
+                  <p class="plan-price">5€ <span>/Bestellung</span></p>
+                  <p class="plan-price-candy">7 Tage die Woche</p>
+                </div>
+                <div>
+                  <ul>
+                    <li><i class="ion-ios-checkmark"></i> Lieferung innerhalb von 24 Stunden</li>
+                    <li>
+                      <i class="ion-ios-checkmark"></i> Auswahl an Premium Verpackungen möglich
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <a href="#" class="btn btn-full">Auswählen</a>
+                </div>
+              </div>
+            </div>
+            <div class="col span-1-of-2">
+              <div class="plan-box">
+                <div>
+                  <h3>Normal</h3>
+                  <p class="plan-price">3€ <span>/Bestellung</span></p>
+                  <p class="plan-price-candy">7 Tage die Woche</p>
+                </div>
+                <div>
+                  <ul>
+                    <li>
+                      <i class="ion-ios-checkmark"></i> Lieferung innerhalb von 48 Stunden 
+                    </li>
+                    <li><i class="ion-ios-checkmark"></i> Kostenlose Lieferung ab 50€</li>
+                 <!--    <li><i class="ion-ios-close"></i></li> -->
+                  </ul>
+                </div>
+                <div>
+                  <a href="#" class="btn btn-full">Auswählen</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-form">
+        <div class="row">
+          <h2>Kontaktieren Sie uns</h2>
+        </div>
+        <div class="row">
+          <form method="post" action="#" class="contact-form">
+            <div class="row">
+              <div class="col span-1-of-3">
+                <label for="name">Name</label>
+              </div>
+              <div class="col span-2-of-3">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Ihr Name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col span-1-of-3">
+                <label for="email">E-Mail</label>
+              </div>
+              <div class="col span-2-of-3">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Ihre E-Mail"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col span-1-of-3">
+                <label>Wie haben Sie uns gefunden? </label>
+              </div>
+              <div class="col span-2-of-3">
+                <select name="find-us" id="find-us">
+                  <option value="friends">Freunde</option>
+                  <option value="search" selected>Suchmaschine</option>
+                  <option value="ad">Werbung</option>
+                  <option value="other">Anderes</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col span-1-of-3">
+                <label>Newsletter</label>
+              </div>
+              <div class="col span-2-of-3">
+                <input type="checkbox" name="news" id="news" checked /> Ja
+              </div>
+            </div>
+            <div class="row">
+              <div class="col span-1-of-3">
+                <label>Ihre Mitteilung</label>
+              </div>
+              <div class="col span-2-of-3">
+                <textarea name="message" placeholder="Nachricht"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col span-1-of-3">
+                <label>&nbsp;</label>
+              </div>
+              <div class="col span-2-of-3">
+                <input type="submit" value="Senden!" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <footer>
+        <div class="row">
+          <div class="col span-1-of-2">
+            <ul class="footer-nav">
+              <li><a href="#">Über uns</a></li>
+              <li><a href="#">Impressum</a></li>
+            </ul>
+          </div>
+          <div class="col span-1-of-2">
+            <ul class="social-links">
+              <li>
+                <a href="#"><i class="ion-logo-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="ion-logo-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="ion-logo-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="ion-logo-googleplus"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="row">
+            <p>copyright &copy; 2022 by candyshop</p>
+          </div>
+        </div>
+      </footer>
+    </body>
+  </html>
+
+</DOCTYPE>
+
+
